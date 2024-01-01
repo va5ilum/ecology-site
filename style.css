@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background: url('/src/ecology.jpg') no-repeat center fixed;
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 15px;
+}
+
+header img {
+    border-radius: 50%;
+}
+
+nav a {
+    margin: 0 15px;
+}
+
+.tablet-version {
+    display: none;
+    margin-left: auto;
+}
+
+.current-page {
+    border-bottom: 3px solid lime;
+    border-radius: 4px;
+}
+
+.entry {
+    margin-left: 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    background-color:lime;
+    color: white;
+}
+
+main {
+    margin-top: 30px;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+}
+
+.card { 
+    width: 300px;
+    height: 380px;
+    border: 1px solid rgb(143, 143, 143);
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    overflow: visible;
+    margin: 20px;
+    transition: box-shadow 0.15s linear;
+    transition: transform 0.15s linear;
+}
+
+.card:hover {
+    box-shadow: 0px 3px 5px gray;
+    transform: scale(1.1);
+}
+
+.new:before {
+    content: "New";
+    font-size: 20px;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    background: red;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.description {
+    padding: 10px;
+}
+
+.price {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.donate-button {
+    position: absolute;
+    bottom: 0;
+    padding: 5px 0;
+    border: none;
+    border-radius: 0px 0px 10px 10px;
+    width: 100%;
+    color: white;
+    background-color: lime;
+    font-size: 18px;
+}
+
+.dropdown {
+    margin-left: auto;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown button { 
+    right: 0;
+}
+
+.menu {
+    margin-right: auto;
+    border: 3px solid rgb(255, 255, 255);
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+}
+
+.menu:hover {
+    background-color: rgba(0, 255, 0, 0.503);
+}
+
+.dropdown-content {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    min-width: 160px;
+    right: 0;
+    transition: opacity 0.5s, visibility 0.5s;
+    transition-delay: 0.5s;
+    opacity: 0;
+}
+
+.dropdown-content a {
+    background-color: rgba(255, 255, 255, 0.745);
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: lightgray;
+}
+
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+    .pc-version {
+        display: none;
+    }
+
+    .tablet-version {
+        display: block;
+    }
+
+    .center-container {
+        width: 100%;
+    }
+    .card {
+        margin: 15px auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .center-container {
+        width: 77%;
+    }
+    .card {
+        min-width: 350px;
+        height: 410px;
+    }
+}
